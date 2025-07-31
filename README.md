@@ -13,7 +13,7 @@ The idea, design, assets (fonts, images, icons) for the 3-column preview card co
 
 * **Bundler:** Vite
 * **CSS:** CSS, PostCSS, Autoprefixer
-* **JavaScript:** ES Module, Web Components
+* **JavaScript:** ES Module
 * **Responsive:** Fully adaptive (desktop & mobile)
 
 ## Design Previews
