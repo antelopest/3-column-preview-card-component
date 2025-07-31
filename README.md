@@ -2,7 +2,7 @@
 
 ## GitHub Pages
 
-[Live Demo]()
+[Live Demo](https://antelopest.github.io/3-column-preview-card-component/)
 
 ## Idea
 
@@ -23,11 +23,12 @@ The idea, design, assets (fonts, images, icons) for the 3-column preview card co
 
 ## Scripts
 
-| Script           | Description                    |
-|------------------|--------------------------------|
-| `npm run dev`    | Start dev server + watch build |
-| `npm run build`  | Create production build        |
-| `npm run deploy` | Build & deploy to GitHub Pages |
+| Script            | Description                         |
+|-------------------|-------------------------------------|
+| `npm run dev`     | Start dev server + watch build      |
+| `npm run build`   | Create production build             |
+| `npm run preview` | Build + start dev server with build |
+| `npm run deploy`  | Build & deploy to GitHub Pages      |
 
 ## License
 
