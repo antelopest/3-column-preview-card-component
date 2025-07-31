@@ -1,10 +1,175 @@
+:root {
+  --color-gold: hsl(31, 77%, 52%);
+  --color-cyan: hsl(184, 100%, 22%);
+  --color-green: hsl(179, 100%, 13%);
+  --color-transparent-white: hsla(0, 0%, 100%, 0.75); /* paragraphs */
+  --color-gray: hsl(0, 0%, 95%); /* background, headings, buttons */
+  --font-size: 15px;
+  --font-family-lexend-deca: 'Lexend Deca';
+  --font-family-big-shoulders-display: 'Big Shoulders';
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --cars-padding: 88px 24px;
+  --car-padding: 45px;
+  --car-border-radius: 10px;
+  --car-gap: 40px;
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-html,
-body {
-  background-color: red;
+:is(html, body) {
+  background-color: var(--color-gray);
+
+  font-family: var(--font-family-lexend-deca), sans-serif;
+  font-size: var(--font-size);
+  font-weight: var(--font-weight-regular);
+
+  color: var(--color-transparent-white);
+
+  height: 100vh;
+}
+
+.main {
+  height: 100%;
+
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.cars {
+  width: 100%;
+  height: 100%;
+
+  margin: 0 auto;
+  padding: var(--cars-padding);
+
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(1, 1fr);
+
+  @media (min-width: 540px) {
+    max-width: 540px;
+  }
+
+  @media (min-width: 720px) {
+    max-width: 720px;
+  }
+
+  @media (min-width: 960px) {
+    max-width: 960px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: 1140px) {
+    max-width: 1140px;
+  }
+
+  @media (min-width: 1320px) {
+    max-width: 1320px;
+  }
+}
+
+.car {
+  padding: var(--car-padding);
+
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+
+  gap: var(--car-gap);
+
+  @media (min-width: 960px) {
+    height: 500px;
+  }
+}
+
+.car:first-child {
+  border-radius: var(--car-border-radius) var(--car-border-radius) 0 0;
+
+  @media (min-width: 960px) {
+    border-radius: var(--car-border-radius) 0 0 var(--car-border-radius);
+  }
+}
+
+.car:last-child {
+  border-radius: 0 0 var(--car-border-radius) var(--car-border-radius);
+
+  @media (min-width: 960px) {
+    border-radius: 0 var(--car-border-radius) var(--car-border-radius) 0;
+  }
+}
+
+.car--sedans {
+  background-color: var(--color-gold);
+}
+
+.car--suvs {
+  background-color: var(--color-cyan);
+}
+
+.car--luxury {
+  background-color: var(--color-green);
+}
+
+.car__info {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: var(--car-gap);
+}
+
+.car__title {
+  text-transform: uppercase;
+  font-family: var(--font-family-big-shoulders-display), sans-serif;
+  font-size: 2rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gray);
+}
+
+.car__description {
+  font-size: 1rem;
+  font-weight: var(--font-weight-regular);
+  color: var(--color-transparent-white);
+  line-height: 2rem;
+}
+
+.car__button {
+  border: 2px solid var(--color-transparent-white);
+  outline: none;
+
+  padding: 16px 32px;
+  border-radius: 50px;
+
+  font-family: var(--font-family-lexend-deca), sans-serif;
+  font-size: 1rem;
+  font-weight: var(--font-weight-regular);
+
+  background-color: var(--color-gray);
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.car__button:hover {
+  background-color: transparent;
+  color: var(--color-gray);
+  border: 2px solid var(--color-transparent-white);
+}
+
+.car__button--sedans {
+  color: var(--color-gold);
+}
+
+.car__button--suvs {
+  color: var(--color-cyan);
+}
+
+.car__button--luxury {
+  color: var(--color-green);
 }
