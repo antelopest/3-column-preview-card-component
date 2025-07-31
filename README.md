@@ -18,8 +18,8 @@ The idea, design, assets (fonts, images, icons) for the 3-column preview card co
 
 ## Design Previews
 
-* [Desktop design](design/active-states.jpg)
-* [Mobile design](design/mobile-design-selected.jpg)
+* [Desktop design](design/desktop-design.jpg)
+* [Mobile design](design/mobile-design.jpg)
 
 ## Scripts
 
